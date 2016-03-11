@@ -6,7 +6,7 @@ public class SinglePlayer {
 	time oneSecDelay = new time();
 	
 		int choice = 0;	
-		int counterTotal = 17;	
+		int CounterTotal = 17;	
 		int newCounterTotal = 16;
 		int computerCheat = 1;
 		int piece1 = 1;
@@ -16,7 +16,7 @@ public class SinglePlayer {
 		public int piece2Pull = newCounterTotal - piece2;
 		public int piece3Pull = newCounterTotal - piece3;
 		
-		int computerFirstTurn = counterTotal + computerCheat - piece1;
+		int computerFirstTurn = CounterTotal + computerCheat - piece1;
 		
 		
 	
@@ -26,9 +26,9 @@ public class SinglePlayer {
 		oneSecDelay.OneSecond();
 		
 			System.out.println("Computer pulled " + piece1 + " piece from the counter pile");
-			System.out.println("Counter total: " + (computerFirstTurn - 1));
+			System.out.println("Counter total: " + (computerFirstTurn));
 			
-		while (newCounterTotal <= 16){
+		while (newCounterTotal  <= 16){
 		System.out.println(user.Username + "'s turn to pull.");
 		
 		
@@ -38,32 +38,65 @@ public class SinglePlayer {
 		
 		choice = keyboard.nextInt();
 		
-		if (choice == 1){
+		if (choice == 1 && CounterTotal <=5){
 			System.out.println(user.Username + " pulled one piece");
-			System.out.println("Counter total: " + (newCounterTotal -= 1));
+			System.out.println("Counter total: " + (CounterTotal -= 1));
 			
-			System.out.println("Computer's turn....");
-				System.out.println("Computer pulled "+piece3+ " pieces from the pile");
-				System.out.println("Counter total: " + (newCounterTotal -= 3 ));
-		}
-		else if (choice == 2){
-			System.out.println(user.Username + " pulled two pieces");
-			System.out.println("Counter total: " + (newCounterTotal -= 2));
 			
 			System.out.println("Computer's turn....");
 				System.out.println("Computer pulled "+piece2+ " pieces from the pile");
-				System.out.println("Counter total: " + (newCounterTotal -= 2));
+				System.out.println("Counter total: " + (CounterTotal -= 3 ));
+				System.out.println(user.Username + " You lose the game! The computer wins!");
+				break;
 		}
-		else if (choice == 3){
+		else if (choice == 2 && CounterTotal <=5){
+			System.out.println(user.Username + " pulled two pieces");
+			System.out.println("Counter total: " + (CounterTotal -= 2));
+			
+			System.out.println("Computer's turn....");
+				System.out.println("Computer pulled "+piece1+ " pieces from the pile");
+				System.out.println("Counter total: " + (CounterTotal -= 1));
+				System.out.println(user.Username + " You lose the game! The computer wins!");
+				break;
+		}
+		else if (choice == 3 && CounterTotal <=5){
 			System.out.println(user.Username + " pulled three pieces");
-			System.out.println("Counter total: " + (newCounterTotal -= 3 ));
+			System.out.println("Counter total: " + (CounterTotal -= 3 ));
 			
 			System.out.println("Computer's turn....");
 				System.out.println("Computer pulled "+piece1+ " piece from the pile");
-				System.out.println("Counter total: " + (newCounterTotal -= 1));
-
+				System.out.println("Counter total: " + (CounterTotal -= 1));
+				System.out.println(user.Username + " You lose the game! The computer wins!");
+				break;
+		
+}
+		
+		else if (choice == 1){
+			System.out.println(user.Username + " pulled one piece");
+			System.out.println("Counter total: " + (CounterTotal -= 1));
 			
+			System.out.println("Computer's turn....");
+				System.out.println("Computer pulled "+piece3+ " pieces from the pile");
+				System.out.println("Counter total: " + (CounterTotal -= 3 ));
 		}
+		else if (choice == 2){
+			System.out.println(user.Username + " pulled two pieces");
+			System.out.println("Counter total: " + (CounterTotal -= 2));
+			
+			System.out.println("Computer's turn....");
+				System.out.println("Computer pulled "+piece2+ " pieces from the pile");
+				System.out.println("Counter total: " + (CounterTotal -= 2));
+		}
+		else if (choice == 3){
+			System.out.println(user.Username + " pulled three pieces");
+			System.out.println("Counter total: " + (CounterTotal -= 3 ));
+			
+			System.out.println("Computer's turn....");
+				System.out.println("Computer pulled "+piece1+ " piece from the pile");
+				System.out.println("Counter total: " + (CounterTotal -= 1));
+				
+		}
+		
 		
 			
 
@@ -77,9 +110,9 @@ public class SinglePlayer {
 		}
 		
 		
-
+	}
 		
-		}		
+				
 
 	
 	
