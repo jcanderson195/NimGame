@@ -46,11 +46,17 @@ public void StartMenu(){
 			
 			break;
 		}else if(choice ==2){
+			TwoPlayers user2 = new TwoPlayers();
+			user2.PlayerTwo();
 			
+			TwoPlayers newTwoPlayerClassic = new TwoPlayers();
+			newTwoPlayerClassic.TwoPlayerClassic(Intro);
+
 			break;
 		}
 		else if (choice ==3){
-			
+			TwoPlayers newTwoPlayerHotSeat = new TwoPlayers();
+			newTwoPlayerHotSeat.TwoPlayerHotSeat();
 			break;
 		}
 			else if (choice == 4){

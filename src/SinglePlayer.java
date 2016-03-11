@@ -11,11 +11,7 @@ public class SinglePlayer {
 		int computerCheat = 1;
 		int piece1 = 1;
 		int piece2 = 2;
-		int piece3 = 3;
-		public int piece1Pull = newCounterTotal - piece1;
-		public int piece2Pull = newCounterTotal - piece2;
-		public int piece3Pull = newCounterTotal - piece3;
-		
+		int piece3 = 3;		
 		int computerFirstTurn = CounterTotal + computerCheat - piece1;
 		
 		
