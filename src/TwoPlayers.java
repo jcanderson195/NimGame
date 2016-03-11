@@ -48,34 +48,40 @@ public class TwoPlayers {
 						System.out.println(user.Username + " pulled one piece");
 						System.out.println("Counter total: " + (CounterTotal -= 1));
 					}
-					else if (choice == 2 && CounterTotal <=3){
+					else if (choice == 2 && CounterTotal ==3){
 						System.out.println(user.Username + " pulled two pieces");
 						System.out.println("Counter total: " + (CounterTotal -= 2));
+						System.out.println(user.Username +" you lost the game." +Username2+ "You won the game!");
+						break;
 						
 						
 					}
-					else if (choice == 3 && CounterTotal <=3){
+					else if (choice == 3 && CounterTotal ==3){
 						System.out.println(user.Username + " pulled three pieces");
 						System.out.println("Counter total: " + (CounterTotal -= 3 ));
-					
+						System.out.println(user.Username +" you lost the game." +Username2+ "You won the game!");
+						break;
+
 			}
 				
-					else if (choice == 1 && CounterTotal <=2){
-						System.out.println(Username2 + " pulled one piece");
+					else if (choice == 1 && CounterTotal ==2){
+						System.out.println(user.Username + " pulled one piece");
 						System.out.println("Counter total: " + (CounterTotal -= 1));
-						System.out.println(user.Username +" you lost the game." +Username2+ "You won the game!");
+						System.out.println(Username2 +" you lost the game." +user.Username+ "You won the game!");
 						
 						
 					}
-					else if (choice == 2 && CounterTotal <=2){
-						System.out.println(Username2 + " pulled two pieces");
+					else if (choice == 2 && CounterTotal ==2){
+						System.out.println(user.Username + " pulled two pieces");
 						System.out.println("Counter total: " + (CounterTotal -= 2));
-						System.out.println(Username2 +" you lost the game." +user.Username+ "You won the game!");
+						System.out.println(user.Username +" you lost the game." +Username2+ "You won the game!");
+						break;
 
 						
 					}
+					
 				
-/*Normal p1*/				else if (choice == 1){
+/*Normal p1*/		else if (choice == 1){
 					System.out.println(user.Username + " pulled one piece");
 					System.out.println("Counter total: " + (CounterTotal -= 1));
 					
@@ -110,35 +116,35 @@ public class TwoPlayers {
 						
 						
 					}
-					else if (choice == 2 && CounterTotal <=3){
+					else if (choice == 2 && CounterTotal == 3){
 						System.out.println(Username2 + " pulled two pieces");
 						System.out.println("Counter total: " + (CounterTotal -= 2));
-						
+						System.out.println(user.Username + " you lost the game." +Username2+ " you won the game!");
+						break;
 						
 					}
-					else if (choice == 3 && CounterTotal <=3){
+					else if (choice == 3 && CounterTotal == 3){
 						System.out.println(Username2 + " pulled three pieces");
 						System.out.println("Counter total: " + (CounterTotal -= 3 ));
 						System.out.println(Username2 + " you lost the game." +user.Username+ " you won the game!");
-					
+						break;
 			}
 					
-					else if (choice == 1 && CounterTotal <=2){
+					else if (choice == 1 && CounterTotal == 2){
 						System.out.println(Username2 + " pulled one piece");
 						System.out.println("Counter total: " + (CounterTotal -= 1));
 						System.out.println(user.Username +" you lost the game." +Username2+ "You won the game!");
-							
+						break;	
 							
 						}
-						else if (choice == 2 && CounterTotal <=2){
+						else if (choice == 2 && CounterTotal == 2){
 							System.out.println(Username2 + " pulled two pieces");
 							System.out.println("Counter total: " + (CounterTotal -= 2));
 							System.out.println(Username2 +" you lost the game." +user.Username+ "You won the game!");
-
+							break;
 							
 						}
 						
-				
 /*normal p2*/			else if (choice == 1){
 						System.out.println(Username2 + " pulled one piece");
 						System.out.println("Counter total: " + (CounterTotal -= 1));
