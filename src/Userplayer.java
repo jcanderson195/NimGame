@@ -12,7 +12,7 @@ public class Userplayer {
 	
 	public void UserInput(){
 	
-		Username = keyboard.next();
+		this.Username = keyboard.next();
 	
 	
 	}

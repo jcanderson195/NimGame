@@ -22,6 +22,7 @@ public class Game {
 		
 		StartMenu();
 	
+		
 	}
 	
 public void StartMenu(){
@@ -32,20 +33,28 @@ public void StartMenu(){
 		System.out.println("Menu");
 		System.out.println("----");
 		OneSec.OneSecond();
-		System.out.println("1. Single Player");
-		System.out.println("2. Two Players");
+		System.out.println("1. Single Player Impossible");
+		System.out.println("2. Two Player Classic");
+		System.out.println("3. Two Player Hot Seat");
 		System.out.println("3. Exit");
 		
 		choice = keyboard.nextInt();
 		
 		if (choice ==1){
-			
+			SinglePlayer newSinglePlayer = new SinglePlayer();
+			newSinglePlayer.SinglePlayerImpossible(Intro);
 			
 			break;
 		}else if(choice ==2){
 			
+			break;
+		}
+		else if (choice ==3){
 			
-		}else if (choice == 3){
+			break;
+		}
+			else if (choice == 4){
+		
 			System.out.println("Thank You For Playing The Game of Nim!");
 			try {
 				Thread.sleep(50000);                 //1000 milliseconds is one second.
