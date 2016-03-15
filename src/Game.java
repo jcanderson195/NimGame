@@ -56,7 +56,7 @@ public void StartMenu(){
 		}
 		else if (choice ==3){
 			TwoPlayers newTwoPlayerHotSeat = new TwoPlayers();
-			newTwoPlayerHotSeat.TwoPlayerHotSeat();
+			newTwoPlayerHotSeat.TwoPlayerHotSeat(Intro);
 			break;
 		}
 			else if (choice == 4){
